@@ -40,9 +40,20 @@ export const patientRegister = catchAsyncErrors(async (req, res, next) => {
 });
 
 export const login = catchAsyncErrors(async (req, res, next) => {
-  const email = req.body?.email?.trim().toLowerCase();
-  const password = req.body?.password;
-  const role = req.body?.role?.trim();
+  const coerceToString = (value) => {
+    if (typeof value === "string") return value.trim();
+    if (Array.isArray(value) && value.length > 0) {
+      return String(value[0]).trim();
+    }
+    if (value !== undefined && value !== null) {
+      return String(value).trim();
+    }
+    return "";
+  };
+
+  const email = coerceToString(req.body?.email).toLowerCase();
+  const password = coerceToString(req.body?.password);
+  const role = coerceToString(req.body?.role);
   const normalizedRole = role ? role.toLowerCase() : undefined;
 
   if (!email || !password) {
