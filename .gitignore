@@ -1,0 +1,32 @@
+# Dependency directories
+node_modules/
+*/node_modules/
+
+# Build outputs
+frontend/dist/
+dashboard/dist/
+backend/build/
+
+# Environment and secrets
+.env
+*.env
+*.env.*
+!sample.env
+backend/config.env
+backend/.env
+dashboard/.env
+frontend/.env
+
+# Logs and temp files
+logs/
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+
+# OS and editor artifacts
+.DS_Store
+Thumbs.db
+.idea/
+.vscode/
