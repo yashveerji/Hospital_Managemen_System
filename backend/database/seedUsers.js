@@ -13,7 +13,7 @@ const DEFAULT_USERS = [
     role: "Admin",
   },
   {
-    firstName: "Peter",
+    firstName: "YashveerJi",
     lastName: "Patient",
     email: "patient@yashveerjicare.com",
     phone: "03007654321",

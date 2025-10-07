@@ -53,7 +53,7 @@ const Login = () => {
               <span>Email address</span>
               <input
                 type="email"
-                placeholder="admin@yashveerjicare.com"
+                placeholder="xyz@yashveerjicare.com"
                 value={email}
                 onChange={(e) => setEmail(e.target.value)}
                 required
